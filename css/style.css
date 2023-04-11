@@ -3,4 +3,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Heebo", sans-serif;
+}
+
+.top-bar .content {
+  height: 45px;
 }/*# sourceMappingURL=style.css.map */
