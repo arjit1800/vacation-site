@@ -1,0 +1,34 @@
+@use 'mixins' as m;
+
+.container-fluid{
+    width: 100%;
+}
+
+.container{
+margin: 0 auto;
+width: 1140px;
+
+@include m.breakpoint-min(xsmall){
+    width: 100%;
+}
+
+@include m.breakpoint-min(small){
+    width: 540px;
+}
+
+@include m.breakpoint-min(medium){
+    width: 720px;
+}
+
+@include m.breakpoint-min(large){
+   width: 960px;
+}
+
+@include m.breakpoint-min(xlarge){
+   width: 1140px;
+}
+
+@include m.breakpoint-min(xxlarge){
+   width: 1320px;
+}
+}

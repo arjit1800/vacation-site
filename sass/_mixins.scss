@@ -1,0 +1,27 @@
+@mixin flex($j-position,$a-position)
+{
+    display: flex;
+    justify-content: $j-position;
+    align-items: $a-position;
+}
+
+$breakpoints: (
+    'xsmall' : 220px,
+    'small' : 576px,
+    'medium': 768px,
+    'large' : 992px,
+    'xlarge': 1200px,
+    'xxlarge': 1400px
+);
+
+@mixin breakpoint-max($size){
+    @media screen and (max-width: map-get($breakpoints, $size)){
+        @content;
+   }
+} 
+
+@mixin breakpoint-min($size){
+  @media screen and (min-width: map-get($breakpoints, $size)){
+      @content;
+ }
+} 

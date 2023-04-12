@@ -1,0 +1,142 @@
+@use 'mixins' as m;
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+    .col-12{
+        grid-column-start: span 12;
+    }
+    .col-8{
+        grid-column-start: span 8;
+    }
+
+    .col-6{
+        grid-column-start: span 6;
+    }
+
+    .col-4{
+        grid-column-start: span 4;
+    }
+
+    .col-3{
+        grid-column-start: span 3;
+    }
+
+    .col-2{
+        grid-column-start: span 2;
+    }
+
+    .col-lg-12{
+        @extend .col-12;
+
+        @include m.breakpoint-min(large){
+            grid-column-start: span 12;
+        }
+        @include m.breakpoint-max(medium){
+            grid-column-start: span 12;
+        }
+    }
+
+    .col-lg-6{
+        @extend .col-6;
+       
+        @include m.breakpoint-min(large){
+            grid-column-start: span 6;
+        }
+        @include m.breakpoint-max(medium){
+            grid-column-start: span 12;
+        }
+    }
+     
+    .col-md-6{
+        @extend .col-6;
+
+        @include m.breakpoint-min(medium){
+            grid-column-start: span 6;
+        }
+        @include m.breakpoint-max(small){
+            grid-column-start: span 12;
+        }
+    }
+
+    .col-sm-6{
+        @extend .col-6;
+
+        @include m.breakpoint-max(small){
+            grid-column-start: span 6;
+        }
+    }
+
+    .col-md-8{
+        @extend .col-8;
+
+        @include m.breakpoint-min(medium){
+            grid-column-start: span 8;
+        }
+        @include m.breakpoint-max(small){
+            grid-column-start: span 12;
+        }
+    }
+
+    .col-sm-8{
+        @extend .col-8;
+
+        @include m.breakpoint-max(small){
+            grid-column-start: span 8;
+        }
+    }
+
+    .col-lg-8{
+        @extend .col-8;
+
+        @include m.breakpoint-min(large){
+            grid-column-start: span 8;
+        }
+        @include m.breakpoint-max(medium){
+            grid-column-start: span 12;
+        }
+    }
+
+    .col-sm-4{
+        @extend .col-4;
+
+        @include m.breakpoint-max(small){
+            grid-column-start: span 4;
+        }
+    }
+
+    .col-md-4{
+        @extend .col-4;
+
+        @include m.breakpoint-min(medium){
+            grid-column-start: span 4;
+        }
+        @include m.breakpoint-max(small){
+            grid-column-start: span 12;
+        }
+    }
+
+    .col-lg-4{
+        @extend .col-4;
+
+        @include m.breakpoint-min(large){
+            grid-column-start: span 4;
+        }
+        @include m.breakpoint-max(medium){
+            grid-column-start: span 12;
+        }
+    }
+
+    .col-lg-3{
+        @extend .col-3;
+
+        @include m.breakpoint-min(large){
+            grid-column-start: span 3;
+        }
+        @include m.breakpoint-max(medium){
+            grid-column-start: span 12;
+        }
+    }
+    
+}
